@@ -8,4 +8,7 @@
 - readme.so to create readme file
 
 ## Screenshots of gameplay
-# ![Screenshot 2021-11-23 223958](https://user-images.githubusercontent.com/80491169/143170716-14e21f91-9895-4e32-bf14-5edb3d866ffa.png)
+![Screenshot 2021-12-16 134111](https://user-images.githubusercontent.com/80491169/146429861-c70a4151-0493-4609-ab15-fc43230847a7.png)
+
+## Error list
+![Screenshot 2021-12-15 232158](https://user-images.githubusercontent.com/80491169/146429872-c6904ff7-dfed-4a4a-bd27-20756d802c3c.png)
