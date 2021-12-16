@@ -1,4 +1,6 @@
-
+/*
+* Creates base for damagable block when player "mines" grass, trees, stone, etc. 
+*/
 
 #include "DamagableActor.h"
 
@@ -14,7 +16,6 @@ ADamagableActor::ADamagableActor()
 void ADamagableActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame

@@ -1,4 +1,7 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+/*
+* Player the user will be interacting with world as. Sets up action that destroys blocks so player can "mine" as well as sets movement.
+*/
+
 
 #pragma once
 
@@ -31,7 +34,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-// private:
-	//void Move_Forward(float AxisValue);;
-
+ /* private:
+	void Move_Forward(float AxisValue);
+	void Move_Back(float AxisValue);
+	*/
 };

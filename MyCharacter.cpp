@@ -1,3 +1,9 @@
+/*
+* Sets player in position when game begins, also outputs coodinates in output for use to keep track of location in world. 
+* Sets camera controls.
+* Sets blocks as damagable so they will disappear upon user interacting with objects. 
+*/
+
 #include "MyCharacter.h"
 #include "Engine/world.h"  // removes error on playerController
 #include "DamagableActor.h" 
@@ -52,22 +58,34 @@ void AMyCharacter::Tick(float DeltaTime)
 	UE_LOG(LogTemp, Warning, TEXT("Location:%s Rotation:%s"), *PlayerViewpointLocation.ToString(), *PlayerViewpointRotation.ToString()); 
 }
 
-// Called to bind functionality to input
+/** Called to bind functionality to input
  void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Super is important for inheriting functions from a parent class. 
 	// Geeksforgeeks: super class: the class whose properties are inherited by sub class is called base class, or super class.
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-//	PlayerInputComponent->BindAction(TEXT("Move_Forward"), this, AMyCharacter::Move_Forward);
+	PlayerInputComponent->BindAction(TEXT("Move_Forward"), this, AMyCharacter::Move_Forward);
+	PlayerInputComponent->BindAction(TEXT("Move_Back"), this, AMyCharacter::Move_Forward);
 		// To set in unreal engine, go to edit, projectsettings, input and set axis mappings.
-//}
-
-//void AMyCharacter::Move_Forward(float AxisValue) //not finished, add other directions and jump
-//{
-	// move forward method needs move forward vector of actor, use Get and mulitply by axis value (I chose 1) to move player set speed, negative vector(-1) moves backwards.
-//	AddMovementInput(GetActorForwardVector() * AxisValue);
 }
+
+void AMyCharacter::Move_Forward(float AxisValue) 
+{
+	// move forward method needs move forward vector of actor, use Get and mulitply by axis value (I chose 1) to move player set speed, negative vector(-1) moves backwards.
+	AddMovementInput((GetActorForwardVector() * AxisValue);
+}
+
+
+void AMyCharacter::Move_Back(float AxisValue)
+
+{
+
+}
+*/
+
+
+
 
 void AMyCharacter::fireWeapon() {
 	// crate damagable class
@@ -80,8 +98,6 @@ void AMyCharacter::fireWeapon() {
 		hitActor->takeAttack(); // actor (block) that's hit by player will be attacked and disappear.
 	}
 }
-
-
 
 FHitResult AMyCharacter::InstantShot() 
 {
